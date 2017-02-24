@@ -1,0 +1,100 @@
+{
+  "global": {
+    "commands": {
+      "test": [
+        {
+          "shell": "powershell",
+          "commands": [
+            "clear",
+            "dir"
+          ]
+        }
+      ]
+    },
+    "events": [
+      {
+        "onInit": [
+          {
+            "script": "init.ps1"
+          }
+        ],
+        "onGoto": [
+          {
+            "shell": "powershell",
+            "command": "clear; dir;"
+          }
+        ]
+      }
+    ]
+  },
+  "options": {
+    "shell": {
+      "default": "powershell"
+    }
+  },
+  "maps": [
+    {
+      "name": "primary",
+      "path": "e:/programming",
+      "type": "root_map",
+      "children": [
+        {
+          "alias": "sdk",
+          "path": "programming",
+          "type": "directory",
+          "children": [
+            {
+              "alias": "projects",
+              "path": "projects",
+              "type": "directory",
+              "children": [
+                {
+                  "alias": "java",
+                  "path": "java",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "alias": "terminal",
+                      "path": "terminal",
+                      "type": "project",
+                      "events": {
+                        "onInit": [
+                          {
+                            "script": "init.ps1"
+                          }
+                        ],
+                        "onGoto": [
+                          {
+                            "shell": "powershell",
+                            "command": "clear; dir;"
+                          }
+                        ]
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "alias": "web",
+                  "path": "web",
+                  "type": "directory",
+                  "children": [
+                    {
+                      "alias": "shrty",
+                      "path": "com.shortydigital",
+                      "type": "project",
+                      "events": {
+                        "onInit": "init.ps1"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

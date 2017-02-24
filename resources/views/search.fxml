@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.stage.Screen?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112"
+          fx:controller="terminal.controllers.SearchController"
+          alignment="CENTER"
+          style="-fx-background-color: #000000; -fx-opacity: 0.7;" prefWidth="${screen.visualBounds.width}"
+          prefHeight="${screen.visualBounds.height}">
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
+    <children>
+        <TextField id="SearchBox" promptText="Search" GridPane.valignment="CENTER" GridPane.halignment="CENTER"
+                   style="-fx-border-width: 0px 0px 2px 0px;
+                          -fx-border-color: transparent transparent white transparent;
+                          -fx-background-color: none;
+                          -fx-text-fill: white;
+                          -fx-font-size: 48pt;
+                          -fx-alignment: center;
+                          -fx-font: bold;">
+            <padding>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </padding>
+        </TextField>
+    </children>
+</GridPane>
